@@ -1,0 +1,96 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: aliceblue;
+}
+
+body{
+    background-image: url(calculator-bg.jpg);
+    background-size: cover;
+    position: relative;
+}
+
+body:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+
+}
+
+.main{
+    height: 100vh;
+}
+
+.page-heading {
+    padding: 50px;
+    text-align: center;
+}
+
+.page-heading h1 {
+    font-size: 50px;
+}
+
+.calculator-wrapper{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.calculator-body{
+    width: 400px;
+    padding: 30px;
+    border-radius: 50px;
+    background-color: #ef7a13;
+}
+
+.display-inner {
+    width: calc(100% - 20px);
+    height: 100%;
+    text-align: right;
+    padding: 20px 10px;
+    background-color: transparent;
+    border-bottom: 0px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.calculator-display {
+    border-radius: 20px;
+    background-color: #1f2823;
+    text-align: right;
+    overflow: hidden;
+}
+
+.button-grid {
+    padding: 20px 0px 0px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.single-cell-btn, 
+.two-cell-btn,
+.two-col-cell-btn {
+    padding: 15px;
+    border: 0.1px solid #1b231e;
+    border-radius: 20px;
+    text-align: center;
+    background: #252525;
+    font-weight: bold;
+}
+
+.two-cell-btn {
+    grid-column: 4/5;
+    display: grid;
+    grid-row: 4/6;
+    place-items: center;
+}
+
+.two-col-cell-btn{
+    grid-column: 1/3;
+}
